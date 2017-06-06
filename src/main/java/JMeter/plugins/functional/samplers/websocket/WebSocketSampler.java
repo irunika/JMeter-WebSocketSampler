@@ -107,7 +107,7 @@ public class WebSocketSampler extends AbstractSampler implements TestStateListen
             connectionTimeout = DEFAULT_CONNECTION_TIMEOUT;
         }
         
-        socket.awaitOpen(connectionTimeout, TimeUnit.MILLISECONDS);
+//        socket.awaitOpen(connectionTimeout, TimeUnit.MILLISECONDS);
         
         return socket;
     }
@@ -161,7 +161,7 @@ public class WebSocketSampler extends AbstractSampler implements TestStateListen
             // - Response matching response pattern is received
             // - Response matching connection closing pattern is received
             // - Timeout is reached
-            socket.awaitClose(responseTimeout, TimeUnit.MILLISECONDS);
+//            socket.awaitClose(responseTimeout, TimeUnit.MILLISECONDS);
             
             //If no response is received set code 204; actually not used...needs to do something else
             if (socket.getResponseMessage() == null || socket.getResponseMessage().isEmpty()) {
